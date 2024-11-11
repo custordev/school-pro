@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Check, Sparkles } from "lucide-react"
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Check, Sparkles } from "lucide-react";
 
 export default function Pricing() {
-  const [isAnnual, setIsAnnual] = useState(false)
+  const [isAnnual, setIsAnnual] = useState(false);
 
-  const monthlyPrice = 299
-  const annualPrice = 2990
+  const monthlyPrice = 299;
+  const annualPrice = 2990;
 
   const features = [
     "Student Information System",
@@ -18,11 +18,14 @@ export default function Pricing() {
     "Timetable Scheduling",
     "Online Learning Integration",
     "Financial Management",
-    "Customizable Reports"
-  ]
+    "Customizable Reports",
+  ];
 
   return (
-    <section className="w-full py-24 sm:py-32 bg-gradient-to-b from-white to-gray-100">
+    <section
+      id="#pricing"
+      className="w-full py-24 sm:py-32 bg-gradient-to-b from-white to-gray-100"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <div className="inline-flex items-center rounded-full border border-violet-200 bg-white px-4 py-2 text-sm font-medium shadow-sm">
@@ -33,7 +36,8 @@ export default function Pricing() {
             Simple, transparent pricing
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Choose the perfect plan for your school. No hidden fees, no surprises.
+            Choose the perfect plan for your school. No hidden fees, no
+            surprises.
           </p>
         </div>
         <div className="mx-auto mt-8 flex justify-center space-x-4">
@@ -55,10 +59,13 @@ export default function Pricing() {
         <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
           <div className="p-8 sm:p-10 lg:flex-auto">
             <h3 className="text-2xl font-bold tracking-tight text-gray-900">
-              <span className="text-violet-500">School Pro</span> {isAnnual ? "Annual" : "Monthly"} Plan
+              <span className="text-violet-500">School Pro</span>{" "}
+              {isAnnual ? "Annual" : "Monthly"} Plan
             </h3>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              Empower your school with our comprehensive management solution. Streamline administration, enhance learning experiences, and foster better communication.
+              Empower your school with our comprehensive management solution.
+              Streamline administration, enhance learning experiences, and
+              foster better communication.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
               <h4 className="flex-none text-sm font-semibold leading-6 text-violet-600">
@@ -114,5 +121,5 @@ export default function Pricing() {
         </div>
       </div>
     </section>
-  )
+  );
 }
